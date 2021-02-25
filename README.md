@@ -8,5 +8,3 @@
 6. After you successfully create database run `python manage.py makemigrations` and then `python manage.py migrate`
 7. To create admin run `python manage.py createsuperuser` in the project folder.
 8. You can change database details in  `settings.py` file inside `myvenue` folder.
-# MyVenue
-# MyVenue
