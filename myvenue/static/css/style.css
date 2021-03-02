@@ -204,3 +204,7 @@ h1 {
 nav.navbar a {
     color: #000;
 }
+
+p.total {
+    font-weight: 500;
+}

@@ -1,6 +1,6 @@
 # My-Venue
 ## To run the Site:
-1. Clone this repo to your local machine run `git clone https://github.com/Bso650/MyVenue.git`
+1. Clone this repo to your local machine run `git clone https://github.com/TimilsinaBimal/My-Venue.git`
 2. If you don't have `pipenv` install it by running `pip install pipenv`
 3. Go to the repo folder and run  `pipenv install --ignore-pipfile`
 4. Now go to `myvenue` folder and run  `python manage.py runserver`

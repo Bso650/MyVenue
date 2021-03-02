@@ -31,7 +31,7 @@ class Venue(models.Model):
         return self.name
 
     def get_url(self):
-        url = self.name.lower().replace(' ', '-')
+        url = self.name.replace(' ', '-')
         return url
 
     # def is_available(self, proposed_date) -> bool:
