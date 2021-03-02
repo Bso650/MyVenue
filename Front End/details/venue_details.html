@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>My Venue</title>
+        <title>Venue Name | My Venue</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,12 +10,11 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
             <a class="navbar-brand" href="#">My Venue</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,38 +35,48 @@
                 <button class="btn btn-danger my-2 mx-2 my-sm-0" type="submit">Register</button>
             </div>
         </nav>
-        <div id="container">
-
-            <div id="bg">
-                <div id="color-overlay"></div>
-            </div>
-
-            <div class="sitetitle">
-                <h1>MY VENUE</h1>
-                <p>Search for the place that suits you best.</p>
-                <form>
-                    <div class="form-row">
-                        <div class="col-5">
-                            <input id="datepicker" class="form-control" placeholder="MM/DD/YYYY" />
+        <div class="container mt-5">
+            <div class="card p-5 d-flex flex-row">
+                <div class='align-self-center'>
+                    <img height="100px" src="https://i.ibb.co/sPCFhFC/oytx3fY.jpg" alt="">
+                </div>
+                <div class="ml-5">
+                    <h3>Venue Name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aut maiores vel quas
+                        veniam quia provident, explicabo atque beatae nisi! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Eum sequi pariatur eveniet facere soluta aperiam ab rerum, expedita sed
+                        officiis!</p>
+                    <div class="d-flex">
+                        <div class="one mr-3">
+                            <p class="bold"><span>Address:</span>Butwal</p>
+                            <p class="bold"><span>Capacity:</span>200</p>
+                            <p class="bold"><span>City:</span>200</p>
+                            <p class="bold"><span>Email:</span>email@email.com</p>
                         </div>
-                        <div class="col-5">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Select City</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-2">
-                            <button type="submit" class="btn btn-primary">Search</button>
+                        <div class="two ml-3">
+                            <p class="bold"><span>price:</span>$200</p>
+                            <p class="bold"><span>Events:</span>$200</p>
+                            <p class="bold"><span>Street Number:</span>$200</p>
+                            <p class="bold"><span>Phone Number:</span>$200</p>
                         </div>
                     </div>
-                </form>
-
-
+                    <h5>Add Extra events as your need<small>(These may cost extra money)</small></h5>
+                    <div class="d-flex">
+                        <div class="one mr-3">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                <label class="custom-control-label" for="customControlInline">DJ</label>
+                            </div>
+                        </div>
+                        <div class="two ml-3">
+                            <p class="bold">$200</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
+        </div>
+
 
 
 
