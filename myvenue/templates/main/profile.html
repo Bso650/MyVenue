@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+{% comment %} {% block title %}{{user}} | {% block title %} {% endcomment %}
+{% block content %}
+<div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Order History</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Venue Name</th>
+                                        {% comment %} <th scope="col">Events</th> {% endcomment %}
+                                        <th scope="col">Booked Date</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for order in orders %}
+                                    <tr>
+                                    <td>{{order.venue_name.name}}</td>
+                                    {% comment %} <td>{{order.selected_events}}</td> {% endcomment %}
+                                    <td>{{order.date_booked_for}}</td>
+                                    {% if order.confirmed %}
+                                    <td>Order Confirmed</td>
+                                    {% else %}
+                                    <td>Order Pending</td>
+                                    {% endif %}
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 my-5">
+                    <div class="card card-signin">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Profile Details</h5>
+                            <div class="d-flex justify-content-between">
+                                <div class="titles">
+                                    <p class="bold">Full Name</p>
+                                    <p class="bold">Username</p>
+                                    <p class="bold">Email</p>
+
+                                </div>
+                                <div class="prices">
+                                {% if user.first_name %}
+                                    <p>{{user.first_name}} {{user.last_name}}</p>
+                                {% else %}
+                                    <p>None</p>
+                                    {% endif %}
+                                    <p>{{user.username}}</p>
+                                    {% if user.email %}
+                                    <p>{{user.email}}</p>
+                                    {% else %}
+                                    <p>None</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="text-center">
+                            <a href="{% url 'account_change_password' %}" class="btn btn-primary"> Change Password</a>
+
+                            <a href="{% url 'account_email' %}" class="btn btn-success mt-2"> Change Email</a></div>
+
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+{% endblock content %}

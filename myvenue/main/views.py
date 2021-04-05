@@ -85,7 +85,14 @@ def search(request):
 @login_required
 def profile(request):
     delete_expired_orders(request.user)
-    return HttpResponse("WELCOME TO PROFILE")
+    user = request.user
+    orders = Order.objects.filter(user=request.user)
+    # print(orders)
+    context = {
+        'user': user,
+        'orders': orders
+    }
+    return render(request, 'main/profile.html', context)
 
 
 @login_required
@@ -215,6 +222,7 @@ def payment(request):
                 if email == "":
                     messages.warning(request, "Email Field is required!")
                     return redirect(".")
+
                 if full_name == "":
                     messages.warning(request, "Full name is required!")
                     return redirect(".")

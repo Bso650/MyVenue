@@ -30,7 +30,6 @@ class VenueAdmin(admin.ModelAdmin):
     list_filter = [
         'city',
         'capacity',
-
     ]
 
 

@@ -5,8 +5,8 @@
 {% block head_title %}{% trans "E-mail Addresses" %}{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-  <div class="row  justify-content-center">
+<div class="container">
+  <div class="row justify-content-center card card-signin my-5 p-5">
     <div class="col-xs-11 col-md-6 content-section">
     <h2 class="heading--2">{% trans "E-mail Addresses" %}</h2>
 {% if user.emailaddress_set.all %}
@@ -37,7 +37,7 @@
 </div>
   {% endfor %}
 
-<div class="buttonHolder">
+<div class="buttonHolder mt-5">
       <button class="secondaryAction btn btn-primary" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
 
       <button class="secondaryAction btn btn-secondary" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
@@ -48,12 +48,12 @@
 </form>
 
 {% else %}
-<p><strong>{% trans 'Warning:'%}</strong> {% trans "You currently do not have any e-mail address set up. You should really add an e-mail address so you can receive notifications, reset your password, etc." %}</p>
+<p><strong>{% trans 'Warning:'%}</strong> {% trans "You currently do not have any e-mail address set up. You should really add an e-mail address so reset your password.." %}</p>
 
 {% endif %}
 
 
-    <h3>{% trans "Add E-mail Address" %}</h3>
+    <h3 class='mt-5'>{% trans "Add E-mail Address" %}</h3>
 
     <form method="post" action="{% url 'account_email' %}" class="add_email">
         {% csrf_token %}
